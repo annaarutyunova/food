@@ -1,6 +1,9 @@
 const baseController = {};
+const model = require('../model')
 
-baseController.welcome = function(req,res) {
-    res.send("Hi Anna");
+baseController.welcome = async function(req,res) {
+    const databases = await model.main();
+    res.send(databases);
+    // res.send("Hi Anna");
 }
 module.exports = baseController;
