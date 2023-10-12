@@ -1,6 +1,9 @@
 const routes = require('express').Router();
-const base = require('../controllers/baseController.js');
-// const model = require('../model/index.js')
-routes.get('/', base.listRecipes);
+const restaurants = require('./restaurants');
+
+routes.get('/', (req,res) => {
+    res.send("Welcome")});
+
+routes.use('/restaurants', restaurants);
 
 module.exports = routes;
