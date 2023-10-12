@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "652854e96fb42637bc9fb7e8"
+  },
+  "name": "De Pineapple Grill",
+  "cuisine": "Hawaiian",
+  "address": "383 S 2nd St W Rexburg, Idaho 83440",
+  "rating": "4.5",
+  "hours": "5pm-8pm"
+},
+{
+  "_id": {
+    "$oid": "652855e76fb42637bc9fb7e9"
+  },
+  "name": "Casa De Ochoa",
+  "cuisine": "Mexican",
+  "address": "383 S 2nd St W Rexburg, Idaho 83440",
+  "rating": "4.3",
+  "hours": "10am-9pm"
+},
+{
+  "_id": {
+    "$oid": "652856426fb42637bc9fb7ea"
+  },
+  "name": "Taqueria EL Rancho",
+  "cuisine": "Mexican",
+  "address": "312 E 4th S Rexburg, Idaho 83440",
+  "rating": "4.5",
+  "hours": "11am-9pm"
+},
+{
+  "_id": {
+    "$oid": "652856846fb42637bc9fb7eb"
+  },
+  "name": "New Fong's",
+  "cuisine": "Chinese",
+  "address": "352 S wnd St W Rexburg, Idaho 83440",
+  "rating": "3.9",
+  "hours": "11am-8pm"
+},
+{
+  "_id": {
+    "$oid": "652856cc6fb42637bc9fb7ec"
+  },
+  "name": "Teton Grill",
+  "cuisine": "American",
+  "address": "101 E Viking Drive MC 232A Brigham Young University - Idaho Rexburg, Idaho 83440",
+  "rating": "3.3",
+  "hours": "8:30am-2pm"
+},
+{
+  "_id": {
+    "$oid": "652857136fb42637bc9fb7ed"
+  },
+  "name": "Red Rabbit Grill",
+  "cuisine": "American",
+  "address": "155 W Main St #8 Rexburg, Idaho 83440",
+  "rating": "4.6",
+  "hours": "8am-10pm"
+},
+{
+  "_id": {
+    "$oid": "652857966fb42637bc9fb7ee"
+  },
+  "name": "Righteous Slice",
+  "cuisine": "Italian-American",
+  "address": "175 W 200 S #100 Rexburg, Idaho 83440",
+  "rating": "4.8",
+  "hours": "11am-10pm"
+},
+{
+  "_id": {
+    "$oid": "652857ed6fb42637bc9fb7ef"
+  },
+  "name": "Original Thai",
+  "cuisine": "Thai",
+  "address": "10 E Main St Rexburg, Idaho 83440",
+  "rating": "4.0",
+  "hours": "11am-9pm"
+}]
