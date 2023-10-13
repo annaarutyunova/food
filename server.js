@@ -8,10 +8,9 @@ const swaggerDocument = require('./swagger.json');
 
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 app.use(bodyParser.json())
-
 app.use('/', require('./routes'))
+app.use(cors());
 
 // app.listen(process.env.PORT || 8080, () => {
 //     console.log('Web Server is listening at port ' + (process.env.PORT || 8080));
