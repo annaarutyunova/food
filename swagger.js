@@ -5,7 +5,7 @@ const doc = {
         description: "API for contacts",
     },
     // host : 'localhost:8080',
-    host : 'food-lrc1.onrender.com/',
+    host : 'food-lrc1.onrender.com',
     schemes: ['http', 'https'],
 };
 
