@@ -24,6 +24,14 @@ const addPlace = async (req, res) => {
         res.status(500).json(response.error || 'Some error occurred while adding a new restaurant.');
     }
 }
+const getById = async (req, res) => {
+    const id = new ObjectId(req.params.id);
+    const result = await mongodb.getDb().db('food').collection('restaurants').find({ _id: id });
+    result.toArray().then((lists) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists[0]);
+    });
+};
 
 
-module.exports = {listRecipes, addPlace};
+module.exports = {listRecipes, addPlace, getById};

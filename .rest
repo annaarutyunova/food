@@ -1,6 +1,8 @@
 # localhost
 GET http://localhost:8080/restaurants HTTP/1.1
 ###
+GET http://localhost:8080/restaurants/652855e76fb42637bc9fb7e9 HTTP/1.1
+###
 POST http://localhost:8080/restaurants HTTP/1.1
 Content-Type: application/json
 
