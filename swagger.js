@@ -4,8 +4,8 @@ const doc = {
         title: "Contacts API",
         description: "API for contacts",
     },
-    // host : 'localhost:8080',
-    host : 'food-lrc1.onrender.com',
+    host : 'localhost:8080',
+    // host : 'food-lrc1.onrender.com',
     schemes: ['http', 'https'],
 };
 
