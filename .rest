@@ -42,3 +42,21 @@ Content-Type: application/json
   "rating": "4.1",
   "hours":"10:30am-7pm"
 }
+
+###
+GET https://food-lrc1.onrender.com/restaurants/652855e76fb42637bc9fb7e9 HTTP/1.1
+###
+
+PUT https://food-lrc1.onrender.com/restaurants HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Chick-fil-A",
+  "cuisine": "American",
+  "address": "Manwaring Center, 525 S Center St Rexburg, Idaho 83440",
+  "rating": "4.1",
+  "hours":"10:30am-7pm"
+}
+
+###
+DELETE https://food-lrc1.onrender.com/restaurants/652855e76fb42637bc9fb7e9 HTTP/1.1
