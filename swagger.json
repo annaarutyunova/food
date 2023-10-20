@@ -5,7 +5,7 @@
     "description": "API for contacts",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "food-lrc1.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",

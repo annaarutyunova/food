@@ -4,9 +4,9 @@ const doc = {
         title: "Contacts API",
         description: "API for contacts",
     },
-    host : 'localhost:8080',
-    // host : 'food-lrc1.onrender.com',
-    schemes: ['http', 'https'],
+    // host : 'localhost:8080',
+    host : 'food-lrc1.onrender.com',
+    // schemes: ['http', 'https'],
 };
 
 const outputFile = './swagger.json';
