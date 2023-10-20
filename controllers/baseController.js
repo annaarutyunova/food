@@ -10,6 +10,7 @@ const listRecipes = async (req,res)  => {
 };
 
 const addPlace = async (req, res) => {
+  try{
     const place = {
         name: req.body.name,
         cuisine: req.body.cuisine,
@@ -22,18 +23,29 @@ const addPlace = async (req, res) => {
         res.status(201).json(response);
     } else {
         res.status(500).json(response.error || 'Some error occurred while adding a new restaurant.');
-    }
+      }
+    } catch(error){
+    
+      res.status(500).json(error || 'Some error occurred while adding a new restaurant.');
+  }
 }
 const getById = async (req, res) => {
+  try{
     const id = new ObjectId(req.params.id);
     const result = await mongodb.getDb().db('food').collection('restaurants').find({ _id: id });
+    if(result){
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists[0]);
     });
-};
+  }}
+  catch{error}{
+    res.status(500).json(error || 'Some error occurred while looking up a restaurant.');
+  }
+ };
 
 const updatePlace = async (req, res) => {
+  try{
     const userId = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
     const body = {
@@ -50,24 +62,29 @@ const updatePlace = async (req, res) => {
       .replaceOne({ _id: userId }, body);
     console.log(response);
     if (response.modifiedCount > 0) {
-      res.status(204).send();
+      res.status(204).send(response);
     } else {
       res.status(500).json(response.error || 'Some error occurred while updating the restaurant.');
     }
+  } catch(error){
+    res.status(500).json(error || 'Some error occurred while updating a restaurant.');
+  }
 };
 
 const deletePlace = async (req, res) => {
-    const userId = new ObjectId(req.params.id);
+  try{
+  const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db('food').collection('restaurants').deleteOne({ _id: userId });
-  // document = await client.db('contacts').collection('contacts').deleteOne({"_id" : id});
-  // res.status(200)
-  // return document
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(200).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
   }
+}
+catch(error){
+  res.status(500).json(error || 'Some error occured while deleting a restaurant.');
+}
 };
 
 
