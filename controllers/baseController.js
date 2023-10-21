@@ -21,9 +21,7 @@ const addPlace = async (req, res) => {
     const response = await mongodb.getDb().db('food').collection('restaurants').insertOne(place);
     if (response.acknowledged) {
         res.status(201).json(response);
-    } else {
-        res.status(500).json(response.error || 'Some error occurred while adding a new restaurant.');
-      }
+    } 
     } catch(error){
     
       res.status(500).json(error || 'Some error occurred while adding a new restaurant.');
@@ -63,9 +61,7 @@ const updatePlace = async (req, res) => {
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send(response);
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the restaurant.');
-    }
+    } 
   } catch(error){
     res.status(500).json(error || 'Some error occurred while updating a restaurant.');
   }
