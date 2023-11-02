@@ -26,6 +26,7 @@ const config = {
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth2(config));
 
+
 ////////// The end of new lines
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
