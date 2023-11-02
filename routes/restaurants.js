@@ -9,8 +9,4 @@ routes.get('/:id', validate.checkId(), validate.checkNewData, base.getById)
 routes.put('/:id',  validate.updatePlace(), validate.checkId(), validate.checkNewData, base.updatePlace)
 routes.delete('/:id', validate.checkId(), validate.checkNewData, base.deletePlace)
 
-// routes.post('/login', loginValidation, (req, res, next) => {
-//     // your login code
-//  });
-
 module.exports = routes;
