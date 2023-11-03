@@ -27,9 +27,14 @@ const config = {
 app.use(auth2(config));
 ////////// The end of new lines
 
+const checkAuth = (req, res) => {
+  if (!req.oidc.isAuthenticated()) {
+    return res.status(401).send('Not logged in');
+  }
+  res.send(JSON.stringify(req.oidc.user));
+}
 
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api-docs', checkAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(bodyParser.json())
 app.use('/', require('./routes'))
 app.use(cors());
