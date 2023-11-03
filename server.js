@@ -27,10 +27,11 @@ const config = {
 app.use(auth2(config));
 ////////// The end of new lines
 
-const checkAuth = (req, res) => {
+const checkAuth = (req, res, next) => {
   if (!req.oidc.isAuthenticated()) {
     return res.status(401).send('Not logged in');
   }
+  next()
   // res.send(JSON.stringify(req.oidc.user));
 }
 
