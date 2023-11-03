@@ -31,7 +31,7 @@ const checkAuth = (req, res) => {
   if (!req.oidc.isAuthenticated()) {
     return res.status(401).send('Not logged in');
   }
-  res.send(JSON.stringify(req.oidc.user));
+  // res.send(JSON.stringify(req.oidc.user));
 }
 
 app.use('/api-docs', checkAuth, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
