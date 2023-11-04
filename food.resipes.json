@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "652854e96fb42637bc9fb7e8"
+  },
+  "name": "Chocolate Chip Cookies",
+  "ingredients": "butter,sugar,flour,eggs,chocolate chips vanilla extract",
+  "instructions": "Preheat your oven to 350°F (175°C).",
+  "time": "20 minutes"
+},
+{
+  "_id": {
+    "$oid": "652855e76fb42637bc9fb7e9"
+  },
+  "name": "Fruit Salad",
+  "ingredients": "variety of fuits, honey",
+  "instructions": "Wash, peel, chop, combine",
+  "time": "10 minutes"
+},
+{
+  "_id": {
+    "$oid": "652856426fb42637bc9fb7ea"
+  },
+  "name": "Vanilla Pudding",
+  "ingredients": "whole milk, sugar, cornstarch, salt, egg yolkd, butter, vanilla",
+  "instructions": "whisk, combine, cook over medium heat",
+  "time": "30 minutes"
+}]

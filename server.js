@@ -29,7 +29,7 @@ app.use(auth2(config));
 
 const checkAuth = (req, res, next) => {
   if (!req.oidc.isAuthenticated()) {
-    return res.status(401).send('Not logged in');
+    return res.status(401).send('Unauthorized. Please log in');
   }
   next()
   // res.send(JSON.stringify(req.oidc.user));
