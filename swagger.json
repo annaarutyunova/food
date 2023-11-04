@@ -8,7 +8,8 @@
   "host": "food-lrc1.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "http",
+    "hhtps"
   ],
   "paths": {
     "/": {
