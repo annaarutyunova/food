@@ -24,7 +24,34 @@ Content-Type: application/json
   "hours":"10:30am-7pm"
 }
 ###
-DELETE http://localhost:8080/restaurants/652855e76fb42637bc9fb7e9 HTTP/1.1
+DELETE http://localhost:8080/recipes/652855e76fb42637bc9fb7e9 HTTP/1.1
+
+//Recipes
+GET http://localhost:8080/recipes HTTP/1.1
+###
+GET http://localhost:8080/recipes/6532bb481aa9066aac723892 HTTP/1.1
+###
+POST http://localhost:8080/recipes HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "any",
+  "ingredients": "any",
+  "instructions": "any",
+  "time":"any"
+}
+###
+PUT http://localhost:8080/recipes/652855e76fb42637bc9fb7e9 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "any",
+  "ingredients": "any",
+  "instructions": "any",
+  "time":"any"
+}
+###
+DELETE http://localhost:8080/recipes/652855e76fb42637bc9fb7e9 HTTP/1.1
 
 // Production
 ###
@@ -59,3 +86,36 @@ Content-Type: application/json
 
 ###
 DELETE https://food-lrc1.onrender.com/restaurants/652855e76fb42637bc9fb7e9 HTTP/1.1
+
+
+// Recipes
+###
+GET https://food-lrc1.onrender.com/recipes
+
+###
+POST https://food-lrc1.onrender.com/recipes HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "any",
+  "ingredients": "any",
+  "instructions": "any",
+  "time":"any"
+}
+
+###
+GET https://food-lrc1.onrender.com/recipes/652855e76fb42637bc9fb7e9 HTTP/1.1
+###
+
+PUT https://food-lrc1.onrender.com/recipes HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "any",
+  "ingredients": "any",
+  "instructions": "any",
+  "time":"any"
+}
+
+###
+DELETE https://food-lrc1.onrender.com/recipes/652855e76fb42637bc9fb7e9 HTTP/1.1
