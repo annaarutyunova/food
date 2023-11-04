@@ -39,4 +39,44 @@ validate.updatePlace = () => {
     ]
 } 
 
+
+
+
+// Recipes
+
+validate.postNewRecipe = () => {
+    return [
+    body('name').notEmpty()
+        .withMessage('Please provide a name.'),
+        body('ingredients').isLength({min: 5}).withMessage('Please provide ingredients.'),
+        body('instructions').notEmpty().isString().withMessage('Please provide instructions.'),
+        body('time').notEmpty().isString().withMessage('Please provide time.')
+]
+}
+
+validate.checkNewRecipe = async(req, res, next) => {
+    let errors = []
+    errors = validationResult(req)
+    if(!errors.isEmpty()){
+        return res.status(400).json({errors:errors.array()})
+    }
+    next()
+}
+    
+validate.checkRecipeId = () => {
+    return [
+        param('id').isString().isLength({min: 15}).withMessage('Invalid id')
+    ]
+}
+ 
+validate.updateRecipe = () => {
+    return [
+        body('name').notEmpty()
+        .withMessage('Please provide a name.'),
+        body('ingredients').isLength({min: 5}).withMessage('Please provide ingredients.'),
+        body('instructions').notEmpty().isString().withMessage('Please provide instructions.'),
+        body('time').notEmpty().isString().withMessage('Please provide time.')
+    ]
+} 
+
 module.exports = validate;
